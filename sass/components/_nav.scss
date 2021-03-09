@@ -1,0 +1,66 @@
+@import "./variables";
+
+nav {
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+  h1 {
+    margin-left: 5rem;
+  }
+  .hamburger {
+    display: none;
+  }
+  ul {
+    color: $White;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    margin-left: 1rem;
+    li {
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+}
+
+// Smaller screen
+@media only screen and (max-width: 768px) {
+  nav {
+    transition: all 0.5s ease;
+    justify-content: center;
+    position: relative;
+    .hamburger {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+      left: 3rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    ul {
+      display: none;
+    }
+  }
+}
+
+.disappear {
+  display: none;
+}
+
+.navBackground {
+  background-color: $White;
+  transition: all 0.5s ease;
+}
+
+.showMenu {
+  display: flex;
+  color: $Black;
+  width: 60%;
+  li {
+    font-size: 0.9rem;
+  }
+}

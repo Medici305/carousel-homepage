@@ -1,0 +1,17 @@
+@import "./nav";
+
+.top-left {
+  border: 1px solid black;
+  background: url("../../images/desktop-image-hero-1.jpg") no-repeat center
+    center;
+  background-size: cover;
+}
+
+// Mobile version
+@media only screen and (max-width: 768px) {
+  .top-left {
+    background: url("../../images/mobile-image-hero-1.jpg") no-repeat center
+      center;
+    background-size: cover;
+  }
+}
