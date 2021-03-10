@@ -30,6 +30,12 @@ body {
 }
 
 h1 {
+  font-size: 2.5vw;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+h2 {
   color: $White;
   font-size: 1.5rem;
 }
@@ -40,14 +46,22 @@ h3 {
     weight: 800;
   }
   letter-spacing: 0.35rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   text-transform: uppercase;
+}
+
+a {
+  color: $Dark_Gray;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 500;
 }
 
 p {
   color: $Dark_Gray;
   line-height: 1.3rem;
-  word-spacing: -.11rem;
+  word-spacing: -0.11rem;
+  text-align: justify;
   font: {
     size: 0.82rem;
     weight: 500;
@@ -59,7 +73,6 @@ li {
 }
 
 i {
-  //pointer-events: none;
   color: #fff;
 }
 

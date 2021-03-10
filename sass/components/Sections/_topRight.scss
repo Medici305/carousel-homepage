@@ -1,10 +1,82 @@
+@import "../variables";
+
 .top-right {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 5rem;
+
+  .text {
+    p {
+      text-align: left;
+    }
+    .shop-now {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem 0;
+      cursor: pointer;
+      img {
+        margin-left: 2rem;
+      }
+    }
+  }
+  .buttons {
+    width: 9.6rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    .left,
+    .right {
+      flex: 0.5;
+      background: $Black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background-color: $Very_Dark_Gray;
+      }
+    }
+  }
 }
 
-// Mobile version
+// Tablet version
 @media only screen and (max-width: 768px) {
   .top-right {
+    padding: 0 3rem;
+    .text {
+      h1 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+      }
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
 
+// Mobile Screem
+@media only screen and (max-width: 600px) {
+  .top-right {
+    .text {
+      h1 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+      }
+      a {
+        color: $Black;
+      }
+    }
+    .buttons {
+      top: -5rem;
+      left: auto;
+      transform: translateX(8.15rem);
+    }
   }
 }

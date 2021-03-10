@@ -9,7 +9,7 @@ nav {
   display: flex;
   align-items: center;
 }
-nav h1 {
+nav h2 {
   margin-left: 5rem;
 }
 nav .hamburger {
@@ -68,23 +68,90 @@ nav ul li {
 }
 
 .top-left {
-  border: 1px solid black;
-  background: url("../../images/desktop-image-hero-1.jpg") no-repeat center center;
+  background-image: url("../../images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
 @media only screen and (max-width: 768px) {
   .top-left {
-    background: url("../../images/mobile-image-hero-1.jpg") no-repeat center center;
+    background: url("../../images/mobile-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
 .top-right {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 5rem;
+}
+.top-right .text p {
+  text-align: left;
+}
+.top-right .text .shop-now {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+.top-right .text .shop-now img {
+  margin-left: 2rem;
+}
+.top-right .buttons {
+  width: 9.6rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.top-right .buttons .left,
+.top-right .buttons .right {
+  flex: 0.5;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.top-right .buttons .left:hover,
+.top-right .buttons .right:hover {
+  background-color: #454545;
 }
 
+@media only screen and (max-width: 768px) {
+  .top-right {
+    padding: 0 3rem;
+  }
+  .top-right .text h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .top-right .text p {
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .top-right .text h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  .top-right .text a {
+    color: black;
+  }
+  .top-right .buttons {
+    top: -5rem;
+    left: auto;
+    transform: translateX(8.15rem);
+  }
+}
 .bottom-left {
-  border: 1px solid black;
   background: url("../../images/image-about-dark.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -107,17 +174,20 @@ nav ul li {
   width: 100%;
   text-align: left;
 }
-.bottom-middle p {
-  text-align: justify;
-}
 
 @media only screen and (max-width: 600px) {
   .bottom-middle {
     justify-content: center;
   }
+  .bottom-middle h3 {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .bottom-middle p {
+    line-height: 2rem;
+  }
 }
 .bottom-right {
-  border: 1px solid black;
   background: url("../../images/image-about-light.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -151,7 +221,7 @@ main .bottom-right {
 
 @media only screen and (max-width: 600px) {
   main {
-    grid-template: 30rem 25rem 15rem 20rem 15rem/1fr;
+    grid-template: repeat(2, 30rem) 15rem 25rem 15rem/1fr;
   }
   main .top-left {
     grid-area: 1/1/2/2;
@@ -230,6 +300,12 @@ body {
 }
 
 h1 {
+  font-size: 2.5vw;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+h2 {
   color: white;
   font-size: 1.5rem;
 }
@@ -242,10 +318,18 @@ h3 {
   text-transform: uppercase;
 }
 
+a {
+  color: #a1a1a1;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 500;
+}
+
 p {
   color: #a1a1a1;
   line-height: 1.3rem;
   word-spacing: -0.11rem;
+  text-align: justify;
   font-size: 0.82rem;
   font-weight: 500;
 }

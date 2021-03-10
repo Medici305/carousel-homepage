@@ -9,9 +9,6 @@ main {
   min-height: 100vh;
   display: grid;
   grid-template: 70% 30% / repeat(10, 1fr);
-  //   > section {
-  //     border: 2px solid green;
-  //   }
   .top-left {
     grid-area: 1 / 1 / 2 / 7;
   }
@@ -32,7 +29,7 @@ main {
 // Mobile version
 @media only screen and (max-width: 600px) {
   main {
-    grid-template: 30rem 25rem 15rem 20rem 15rem / 1fr;
+    grid-template: repeat(2, 30rem) 15rem 25rem 15rem / 1fr;
     .top-left {
       grid-area: 1 / 1 / 2 / 2;
     }
@@ -50,45 +47,3 @@ main {
     }
   }
 }
-
-/*
-main {
-  //border: 2px solid green;
-  min-height: 100vh;
-  section {
-    border: 1px solid blue;
-  }
-  .top {
-    min-height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-
-    .top-left {
-      border: 1px solid red;
-      flex: 0.6;
-    }
-    .top-right {
-      border: 1px solid red;
-      flex: 0.4;
-    }
-  }
-  .bottom {
-    min-height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    .bottom-left {
-      border: 1px solid red;
-      flex: 0.3;
-    }
-    .bottom-middle {
-      border: 1px solid red;
-      flex: 0.4;
-    }
-    .bottom-right {
-      border: 1px solid red;
-      flex: 0.3;
-    }
-  }
-}
-
-*/
