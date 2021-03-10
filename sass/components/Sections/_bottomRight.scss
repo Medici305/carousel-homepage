@@ -1,0 +1,14 @@
+.bottom-right {
+  border: 1px solid black;
+  background: url("../../images/image-about-light.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+// Mobile version
+@media only screen and (max-width: 768px) {
+  .bottomrightt {
+    background: url("../../images/image-about-light.jpg") no-repeat center
+      center;
+    background-size: cover;
+  }
+}

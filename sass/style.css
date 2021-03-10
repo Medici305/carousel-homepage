@@ -79,6 +79,55 @@ nav ul li {
     background-size: cover;
   }
 }
+.top-right {
+  border: 1px solid black;
+}
+
+.bottom-left {
+  border: 1px solid black;
+  background: url("../../images/image-about-dark.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom-left {
+    background: url("../../images/image-about-dark.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+.bottom-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.bottom-middle h3 {
+  width: 100%;
+  text-align: left;
+}
+.bottom-middle p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .bottom-middle {
+    justify-content: center;
+  }
+}
+.bottom-right {
+  border: 1px solid black;
+  background: url("../../images/image-about-light.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .bottomrightt {
+    background: url("../../images/image-about-light.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
 main {
   min-height: 100vh;
   display: grid;
@@ -91,10 +140,10 @@ main .top-right {
   grid-area: 1/7/2/11;
 }
 main .bottom-left {
-  grid-area: 2/1/4/11;
+  grid-area: 2/1/3/4;
 }
 main .bottom-middle {
-  grid-area: 2/4/8/11;
+  grid-area: 2/4/3/8;
 }
 main .bottom-right {
   grid-area: 2/8/3/11;
@@ -102,7 +151,7 @@ main .bottom-right {
 
 @media only screen and (max-width: 600px) {
   main {
-    grid-template: repeat(5, 30rem)/1fr;
+    grid-template: 30rem 25rem 15rem 20rem 15rem/1fr;
   }
   main .top-left {
     grid-area: 1/1/2/2;
@@ -167,9 +216,38 @@ body {
   text-align: center;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 2rem;
+}
+
 h1 {
   color: white;
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.35rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: #a1a1a1;
+  line-height: 1.3rem;
+  word-spacing: -0.11rem;
+  font-size: 0.82rem;
+  font-weight: 500;
 }
 
 li {

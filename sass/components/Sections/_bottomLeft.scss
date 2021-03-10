@@ -1,0 +1,13 @@
+.bottom-left {
+  border: 1px solid black;
+  background: url("../../images/image-about-dark.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+// Mobile version
+@media only screen and (max-width: 768px) {
+  .bottom-left {
+    background: url("../../images/image-about-dark.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}

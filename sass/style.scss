@@ -16,9 +16,42 @@ body {
   text-align: center;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 2rem;
+}
+
 h1 {
   color: $White;
   font-size: 1.5rem;
+}
+
+h3 {
+  font: {
+    size: 0.9rem;
+    weight: 800;
+  }
+  letter-spacing: 0.35rem;
+  padding: .5rem 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: $Dark_Gray;
+  line-height: 1.3rem;
+  word-spacing: -.11rem;
+  font: {
+    size: 0.82rem;
+    weight: 500;
+  }
 }
 
 li {

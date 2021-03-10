@@ -1,0 +1,22 @@
+.bottom-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+  h3 {
+    width: 100%;
+    text-align: left;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+// Mobile version
+@media only screen and (max-width: 600px) {
+  .bottom-middle {
+    justify-content: center;
+  }
+}
